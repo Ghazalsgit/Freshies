@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+  font-family: "Gluten", "cursive";
+}
+.wrapper {
+  max-width: 1980px;
+}
+
+/* Header */
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(240, 237, 237);
+}
+
+.logo {
+  font-size: 20px;
+  color: #ff5c58;
+  padding: 2em;
+  border-radius: 90%;
+  background-color: rgb(240, 237, 237);
+}
+
+nav {
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+}
+
+nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+nav ul li:hover {
+  transform: scale(1.4);
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ff5c58;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Main container with a background picture */
+
+.main-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1em;
+  background-image: url("media/img/fruktbakgrund.jpg");
+  background-size: cover;
+  min-height: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.button-container {
+  position: fixed;
+  padding: 10px;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container:hover {
+  transform: scale(1.5);
+  transition: all ease 500ms;
+}
+.button-container i {
+  color: #ff5c58;
+  font-size: large;
+  margin-top: 1em;
+}
+.main-container h1 {
+  position: relative;
+  color: #ffb319;
+  font-size: 80px;
+  line-height: 0.9;
+}
+.main-container p {
+  color: #ff5c58;
+  font-size: 25px;
+}
+.main-container span {
+  display: block;
+}
+
+/* About us section */
+
+.about-us-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ff5c58;
+  background-color: rgb(240, 237, 237);
+  height: 90vh;
+}
+.about-us-bild {
+  width: 30%;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+}
+.about-us-bild img {
+  height: auto;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  margin-left: 4px;
+  margin-left: 4px;
+  border: solid #fcd2d1 1px;
+}
+.about-us-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30%;
+  padding: 2em;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: large;
+}
+.about-us-text h2 {
+  margin-bottom: 2em;
+  border-bottom: #f97371 solid;
+  width: 100%;
+}
+
+/* A container with 3 cards */
+
+.stora-kort-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(240, 237, 237);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 90vh;
+  background: linear-gradient(rgb(240, 237, 237), #ffb319, rgb(240, 237, 237));
+}
+
+.boka-bord-kort {
+  width: 25%;
+  transition: 450ms;
+  background-image: url(media/img/kiwi.jpg);
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: solid #fcd2d1 1px;
+}
+.boka-bord-kort span {
+  display: block;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+.erbjudande-meny-kort {
+  width: 25%;
+  transition: 450ms;
+  background-image: url(media/img/passionfrukt.jpg);
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: solid #fcd2d1 1px;
+}
+.erbjudande-meny-kort span {
+  display: block;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+.oppettider-kort {
+  width: 25%;
+  transition: 450ms;
+  background-image: url(media/img/vattenmelon.jpg);
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: solid #fcd2d1 1px;
+}
+.oppettider-kort span {
+  display: block;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+.stora-kort-container button {
+  width: 80px;
+  height: 30px;
+}
+.stora-kort-container button:hover {
+  background-color: #f2a154;
+}
+.boka-bord-kort:hover,
+.erbjudande-meny-kort:hover,
+.oppettider-kort:hover {
+  transform: scale(1.08);
+}
+.kort-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #e7e6e1;
+  font-size: large;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+/* Another container woth 3 cards  */
+
+.enkla-kort-container {
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(rgb(240, 237, 237), #f97371, rgb(240, 237, 237));
+}
+.enkel-kort {
+  width: 25%;
+  height: 70vh;
+  border: solid #fcd2d1 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(media/img/fräscht.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.enkel-kort li {
+  list-style-type: none;
+}
+.enkel-kort-1 {
+  width: 25%;
+  height: 70vh;
+  border: solid #fcd2d1 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background-image: url(media/img/roosaaa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.enkel-kort-2 {
+  width: 25%;
+  height: 70vh;
+  border: solid #fcd2d1 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background-image: url(media/img/blodig.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.enkel-kort-1 p {
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 20px;
+  line-height: 1em;
+}
+.enkel-kort-2 p {
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 20px;
+  color: #e7e6e1;
+}
+
+/* parallax scroll effects */
+
+.första-parallax-bakgrunden {
+  padding: 10em;
+  background-image: url(media/img/blodapelsin.jpg);
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.andra-parallax-bakgrunden {
+  display: flex;
+  justify-content: center;
+  font-family: "Cinzel", serif;
+  color: rgb(231, 230, 225);
+  font-size: large;
+  padding: 10em;
+  background-image: url(media/img/pexels-karolina-grabowska-4230621.jpg);
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tredje-parallax-bakgrunden {
+  display: flex;
+  justify-content: center;
+  font-family: "Cinzel", serif;
+  color: rgb(231, 230, 225);
+  font-size: large;
+  padding: 10em;
+  background-image: url(media/img/jordgubbimjölk.jpg);
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Contact us container */
+
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 237, 237);
+  padding-bottom: 2em;
+  height: 90vh;
+
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: solid #fcd2d1 1px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #ff5c58;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #fcd2d1;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
+.contact-us-container h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f97371;
+  font-size: 20px;
+  padding-top: 2em;
+  margin-bottom: 2em;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f97371;
+}
+.adress-footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 1.5em;
+  text-align: center;
+}
+.tel-footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 1.5em;
+  text-align: center;
+}
+.open-footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 1.5em;
+  text-align: center;
+}

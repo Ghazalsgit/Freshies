@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Freshies</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+<!-- Header and navigation -->    
+    <header>
+      <div class="logo"><h1>Freshies</h1></div>
+      <nav>
+        <ul>
+          <li><a href="">Hem</a></li>
+          <li><a href="#about-us">Om oss</a></li>
+          <li><a href="#flavours">Smaker</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+<!--Main container with pic and some text -->    
+    <div class="main-container">
+      <h1><span>A taste of</span><span>the summer!</span></h1>
+      <p>The fresh start that you need.</p>
+      <div class="button-container">
+        <a href="#" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      </div>
+    </div>
+<!--About us section -->
+    <section class="about-us-container" id="about-us">
+      <div class="about-us-bild">
+        <img src="media/img/pexels-charlotte-may-5946786.jpg" alt="smoothis" width="100%"/>
+        <img src="media/img/pexels-charlotte-may-5947090.jpg" alt="" width="100%"/>
+      </div>
+      <div class="about-us-text">
+        <h2>Vilka är vi</h2>
+        <p>
+          Vi på juice factory erbjuder fräscha, nypressade juice samt olika hälsosamma smoothies till ett rimligt pris. Välj bland våra färska frukt och grönsaker så löser vi resten. 
+        </p>
+      </div>
+<!-- First parallax -->
+    </section>
+    <div class="första-parallax-bakgrunden"></div>
+<!-- 3 cards with some content -->
+      <section class="enkla-kort-container" id="flavours">
+        <article class="enkel-kort">
+          <h3>Slush</h3>
+          <ul>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+            <li>bla</li>
+          </ul> 
+        </article>
+        <article class="enkel-kort-1">
+          <h3>Juice</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa expedita commodi aliquid, impedit dolorum error esse asperiores ut, laudantium quo adipisci vitae id! Sint, vero facilis. Placeat sint nisi minima?</p>
+        </article>
+        <article class="enkel-kort-2">
+          <h3>Smoothie</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid dolorem dicta corporis maiores ducimus animi vitae esse? Earum qui nemo aliquam voluptatum odit impedit in?</p>
+        </article>
+      </section>
+<!-- Second parallax -->
+      <div class="andra-parallax-bakgrunden"></div>
+<!-- Another section for some cards and content -->
+    <section class="stora-kort-container">
+<!-- first card -->
+      <article class="boka-bord-kort">
+        <div class="overlay-kort">
+        </div>
+        <div class="kort-content">
+          <h3>lorem</h3>
+          <P><span>lorem</span><span>lorem</span><span>ring gärna telefonnummer:</span><span>031769458</span></P>
+          <a href="pages/kontakt.html"><button type="button">Boka bord</button></a>
+        </div>
+      </article>
+<!-- Second card -->
+      <article class="erbjudande-meny-kort">
+        <div class="overlay-kort"></div>
+        <div class="kort-content">
+          <h3>Rubrik</h3>
+          <P><span>lerom</span><span>lorem</span></P>
+          <a href="pages/meny.html"><button type="button">lorem</button></a>
+      </article>
+<!--Third card -->
+      <article class="oppettider-kort">
+        <div class="overlay-kort"></div>
+        <div class="kort-content">
+          <h3>Öppettider</h3>
+          <P><span>Måndag - fredag</span><span>11:00 - 01:00</span><span>Lördag-söndag</span><span>11:00 - 03:00</span></P>
+          <a href="#footer"><button type="button">Hitta hit</button></a>
+      </article>
+    </section>
+<!-- Third parallax -->
+    <div class="tredje-parallax-bakgrunden"></div>
+<!-- Contact us section -->    
+    <section class="contact-us-container" id="contact">
+      <h3>Kontakta oss</h3>
+  <div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Förnamn</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Efternamn</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">Land</label>
+    <select id="country" name="country">
+      <option value="Sweden">Sverige</option>
+      <option value="denmark">Danmark</option>
+      <option value="norge">Norge</option>
+      <option value="finland">Finland</option>
+      <option value="iceland">Island</option>
+    </select>
+
+    <label for="subject">Meddelande</label>
+    <textarea id="subject" name="subject" style="height:200px"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    </section>
+<!-- Footer -->
+<footer>
+<div class="adress-footer"><p><span>Blablagatan 45</span><span>41530 Göteborg</span><span>Sverige</span></p></div>
+<div class="tel-footer"><p><span>Telefonnummer</span><span>947693470</span><span>Email</span><span>Blablabla@gmail.com</span></p></div>
+<div class="open-footer"><p><span>Öppettider</span><span>Måndag-Fredag</span><span>11:00 - 18:00</span><span>Lördag-söndag</span><span>12:00-16:00</span></p></div>
+</footer>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  </body>
+</html>
