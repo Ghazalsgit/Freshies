@@ -103,6 +103,17 @@ nav ul li a {
   font-size: large;
   margin-top: 1em;
 }
+.button-container i:hover {
+  animation-name: knapp;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes knapp {
+  0%{transform: scale(1.5);}
+  50%{transform: scale(1.9);}
+  100%{transform: scale(1.5);}
+  
+}
 .main-container h1 {
   position: relative;
   color: #ffb319;
@@ -179,6 +190,10 @@ nav ul li a {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   border: solid #fcd2d1 1px;
+  transition: 0.5s;
+}
+.boka-bord-kort:hover{
+  transform: rotateY(180deg);
 }
 .boka-bord-kort span {
   display: block;
@@ -518,3 +533,73 @@ footer {
   flex-direction: column;
   background-color: rgb(245, 245, 245);
 }
+nav .icon {
+  display: none;
+  color: #ff5c58;
+}
+
+@media only screen and (max-width: 600px){
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  nav li:not(:first-child){
+    width: 100%;
+    display: none;
+  }
+  nav .icon {
+    display: block;
+  }
+  
+  .main-container{
+    background-image: url(media/img/pexels-john-finkelstein-1630588.jpg);
+  }
+  .about-us-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us-bild{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us-text{
+    width: 100%;
+  }
+  .enkla-kort-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .enkel-kort, .enkel-kort-1, .enkel-kort-2{
+    width: 100%;
+    height: 90vh;
+  }
+  .stora-kort-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .boka-bord-kort, .erbjudande-meny-kort, .oppettider-kort{
+    width: 100%;
+    height: 90vh;
+  }
+  .contact-us-container, .container{
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+  }
+
+
+  
+}
+

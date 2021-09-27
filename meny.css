@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     background-color: rgb(240, 237, 237);
   }
   
@@ -67,27 +68,30 @@ header {
 
 .meny-container {
     width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    margin-top: 5em;
   }
   .left-container {
     width: 40%;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: rgb(245, 245, 245);
+    border: solid tomato;
   
   }
   .right-container {
     width: 40%;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(245, 245, 245);
+    border: tomato solid;
   }
   
 
