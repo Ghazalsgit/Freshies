@@ -20,7 +20,6 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     background-color: rgb(240, 237, 237);
   }
@@ -72,7 +71,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5em;
+    margin-top: 2em;
   }
   .left-container {
     width: 40%;
@@ -83,19 +82,63 @@ header {
     justify-content: space-evenly;
     background-color: rgb(245, 245, 245);
     border: solid tomato;
+    color: #ff5c58;
+    animation-name: left-container;
+    animation-duration: 2s;
   
   }
   .right-container {
     width: 40%;
     height: 85vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
     background-color: rgb(245, 245, 245);
     border: tomato solid;
+    font-size: 17px;
+    animation-name: right-container;
+    animation-duration: 2s;
+  }
+  .right-container li {
+    list-style: none;
+  }
+  .right-container li:nth-child(even) {
+    color: rgb(19, 84, 19);
+  }
+  .right-container li:nth-child(odd) {
+    color: rgb(227, 114, 15);
+  }
+
+  .flavours {
+    display: grid;
+    grid-column: 1 / 2;
+    justify-content: end;
+    line-height: 2em;
+      
+  }
+  .container-between{
+    display: grid;
+    grid-column: 2 / 4;
+    justify-content: center;
+    line-height: 2em;
+  }
+  .prices {
+    display: grid;
+    justify-content: end;
+    grid-column: 4 / 5;
+    line-height: 2em;   
+  }
+  @keyframes left-container {
+    0%{margin-left: -1000px;}
+    100%{margin: 0;}
+    
+  }
+  @keyframes right-container {
+    0%{margin-right: -1000px;}
+    100%{margin: 0;}
+    
   }
   
-
-
   /* footer */
 footer {
     width: 100%;
