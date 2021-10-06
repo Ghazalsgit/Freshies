@@ -89,14 +89,11 @@ nav ul li a {
 .dropdown-content {
   position: absolute;
   display: none;
-  background-color: rgb(240, 237, 237, 0);
+  background-color: rgb(240, 237, 237);
   min-width: 160px;
 }
-.dropdown-content a{
-  border-bottom: solid #ff5c58 1px;
-}
 .dropdown i{
-  margin-left: 10px;
+  margin-left: 3px;
 }
 
 .dropdown-content a {
@@ -606,12 +603,17 @@ header{
   }
   .logo{
     background-color: transparent;
+    display: none;
   }
   .back-button {
     display: block;
     padding: 0.7em;
     background-color: #f97371;
     color: #fff;
+  }
+  header .back-button{
+    position: absolute;
+    left: 0;
   }
   header a {
     text-decoration: none;

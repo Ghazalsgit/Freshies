@@ -250,25 +250,22 @@ footer {
     }
     .right-container{
       width: 90%;
-      height:100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-    }
-    .meny-container {
-      display: flex;
-      flex-direction: column;
+      margin: auto; 
+      font-size: small;   
     }
     
     /* footer for mobile */
     footer{
-      margin-top:50px;
+      width: 100%;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      font-size: small;
     }
-
+footer span {
+  display: block;
+}
     .open_footer{
       flex-wrap: wrap;
       display: flex;
