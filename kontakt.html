@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Freshies</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+<!-- a wrapper for the whole body, to style bigger screens -->    
+    <div class="wrapper">
+<!-- Header and navigation -->  
+  
+<header id="logo">
+  <div class="logo"><h1>Freshies</h1></div>
+  <a href="index.html"><button class="back-button">Gå tillbaka</button></a>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Hem</a></li>
+      <li><a href="/meny.html">Meny</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+    <!-- Contact us section containing a form and a send button -->    
+    <section class="contact-us-container" id="contact">
+      <h3>Kontakta oss</h3>
+  <div class="container">
+  <form>
+    <label for="fname">Förnamn</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Efternamn</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">Land</label>
+    <select id="country" name="country">
+      <option value="Sweden">Sverige</option>
+      <option value="denmark">Danmark</option>
+      <option value="norge">Norge</option>
+      <option value="finland">Finland</option>
+      <option value="iceland">Island</option>
+    </select>
+
+    <label for="subject">Meddelande</label>
+    <textarea id="subject" name="subject" style="height:200px"></textarea>
+    <input type="submit" value="Skicka">
+  </form>
+</div>
+    </section>
+<!-- google maps -->    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.924737182274!2d11.953063015849308!3d57.70074848111892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff321ab4e87cf%3A0xd856154bc8e87514!2sJENSEN%20yrkesh%C3%B6gskola%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1632945649858!5m2!1ssv!2sse" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- Footer -->
+<footer>
+<div class="adress-footer"><p><span>Blablagatan 45</span><span>41530 Göteborg</span><span>Sverige</span></p></div>
+<div class="tel-footer"><p><span>Telefonnummer</span><span>947693470</span><span>Email</span><span>Blablabla@gmail.com</span></p></div>
+<div class="open-footer"><p><span>Öppettider</span><span>Måndag-Fredag</span><span>11:00 - 18:00</span><span>Lördag-söndag</span><span>12:00-16:00</span></p></div>
+</footer>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+  </body>
+</html>

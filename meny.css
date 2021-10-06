@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,100&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +8,16 @@
 html{
   scroll-behavior: smooth;
 }
+.wrapper {
+  max-width: 1980px;
+}
 
 body {
   min-height: 100vh;
-  background-color: white;
-  font-family: "Gluten", "cursive";
+  background-color: rgb(240, 237, 237);
+  font-family: 'raleway',"Gluten", "cursive";
 }
+/* header and navigation */
 header {
     height: 10vh;
     width: 100%;
@@ -20,8 +25,12 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
     top: 0;
     background-color: rgb(240, 237, 237);
+  }
+  .back-button{
+    display: none;
   }
   
   .logo {
@@ -46,6 +55,9 @@ header {
   }
   
   nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     list-style: none;
     width: 100%;
     height: 100%;
@@ -64,7 +76,37 @@ header {
     justify-content: space-evenly;
     align-items: center;
   }
+  .dropdown .drop {
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0; 
+  }
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; 
+  }
 
+  .dropdown-content a {
+    color: #ff5c58;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: small;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 100;
+  }
+/* Container for the menu with 2 divs one for left and one for right */
 .meny-container {
     width: 100%;
     height: 90vh;
@@ -77,25 +119,30 @@ header {
     width: 40%;
     height: 85vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgb(245, 245, 245);
+    justify-content: center;
+    background-color: white;
     border: solid tomato;
     color: #ff5c58;
+    background-image: url(media/img/bär.jpeg);
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     animation-name: left-container;
     animation-duration: 2s;
-  
   }
+  .menu-name{
+margin-top: 1em;
+  }
+  
   .right-container {
     width: 40%;
     height: 85vh;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     align-items: center;
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     border: tomato solid;
     font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     animation-name: right-container;
     animation-duration: 2s;
   }
@@ -103,7 +150,7 @@ header {
     list-style: none;
   }
   .right-container li:nth-child(even) {
-    color: rgb(19, 84, 19);
+    color: rgb(159, 21, 12);
   }
   .right-container li:nth-child(odd) {
     color: rgb(227, 114, 15);
@@ -129,12 +176,11 @@ header {
     line-height: 2em;   
   }
   @keyframes left-container {
-    0%{margin-left: -1000px;}
-    100%{margin: 0;}
-    
+    0% {margin-left: -1000px;}
+    100% {margin: 0;}
   }
   @keyframes right-container {
-    0%{margin-right: -1000px;}
+    0%{margin-right: -100px;}
     100%{margin: 0;}
     
   }
@@ -147,6 +193,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     background-color: #f97371;
+    color: white;
   }
   .adress-footer p {
     display: flex;
@@ -169,3 +216,68 @@ footer {
     line-height: 1.5em;
     text-align: center;
   }
+  /* responsive design */
+  @media only screen and (max-width: 768px){
+    
+    /* header & nav for mobile */
+    header{
+      width: 100%;
+      background-color: transparent;
+    }
+    header .back-button{
+      position: absolute;
+      left: 0;
+    }
+    nav {
+      display: none;
+    }
+    nav .icon {
+      display: block;
+    }
+    .logo{ 
+      display: none;
+    }
+    .back-button {
+      display: block;
+      padding: 0.7em;
+      background-color: #f97371;
+      color: #fff;
+    }
+
+    /* Menu container for mobile */
+    .left-container{
+      display: none;
+    }
+    .right-container{
+      width: 90%;
+      height:100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .meny-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* footer for mobile */
+    footer{
+      margin-top:50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .open_footer{
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .open_footer > p {
+      line-height:3;
+    }
+    
+  }
+  

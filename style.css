@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,100&display=swap');
+/* Some global styling */
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +13,14 @@ html{
 body {
   min-height: 100vh;
   background-color: white;
-  font-family: "Gluten", "cursive";
+  font-family: 'raleway', "Gluten", "cursive";
 }
 .wrapper {
   max-width: 1980px;
+  min-width: 360px;
 }
 
-/* Header */
+/* Header and navigationsmenu */
 
 header {
   height: 10vh;
@@ -27,8 +30,12 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
   z-index: 2;
   background-color: rgb(240, 237, 237);
+}
+.back-button{
+  display: none;
 }
 
 .logo {
@@ -42,20 +49,23 @@ header {
 nav {
   width: 50%;
   height: 100%;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 nav ul {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: center !important;
 }
 
 nav ul li {
   list-style: none;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   transition: 1s;
 }
 
@@ -71,6 +81,80 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
 }
+/* a drop down option in the navigationsmenu */
+.dropdown .drop {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  background-color: rgb(240, 237, 237, 0);
+  min-width: 160px;
+}
+.dropdown-content a{
+  border-bottom: solid #ff5c58 1px;
+}
+.dropdown i{
+  margin-left: 10px;
+}
+
+.dropdown-content a {
+  color: #ff5c58;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: small;
+}
+
+.dropdown-content a:hover {
+  animation-name: drop-down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes drop-down {
+  0%{transform: scale(1.1);}
+  50%{transform: scale(1.3);}
+  100%{transform: scale(1.1);}
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header{
+  border-bottom: 1px solid #E2E8F0;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  
+  padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #f97371;
+}
+
+.nav-link:hover{
+  animation-name: hamlink; 
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 /* Main container with a background picture */
 
 .main-container {
@@ -82,13 +166,16 @@ nav ul li a {
   align-items: flex-start;
   justify-content: center;
   padding: 1em;
-  background-image: url("media/img/fruktbakgrund.jpg");
+  background-image: url("media/img/ananas:klippt.jpg");
   background-size: cover;
   min-height: 100px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main-container h1{
+  margin-top: -100px;
 }
 .button-container {
   position: fixed;
@@ -97,7 +184,6 @@ nav ul li a {
   display: flex;
   flex-direction: column;  
 }
-
 .button-container i {
   color: #ff5c58;
   font-size: large;
@@ -128,7 +214,7 @@ nav ul li a {
   display: block;
 }
 
-/* About us section */
+/* About us section with pics and text */
 
 .about-us-container {
   display: flex;
@@ -167,89 +253,7 @@ nav ul li a {
   border-bottom: #f97371 solid;
   width: 100%;
 }
-
-/* A container with 3 cards */
-
-.stora-kort-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(240, 237, 237);
-  padding-top: 1em;
-  padding-bottom: 1em;
-  height: 90vh;
-  background: linear-gradient(rgb(240, 237, 237), #ffb319, rgb(240, 237, 237));
-}
-
-.boka-bord-kort {
-  width: 25%;
-  transition: 450ms;
-  background-image: url(media/img/kiwi.jpg);
-  background-size: cover;
-  height: 70vh;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: solid #fcd2d1 1px;
-  transition: 0.5s;
-}
-.boka-bord-kort:hover{
-  transform: rotateY(180deg);
-}
-.boka-bord-kort span {
-  display: block;
-  align-content: center;
-  font-weight: bold;
-  text-align: center;
-}
-.erbjudande-meny-kort {
-  width: 25%;
-  transition: 450ms;
-  background-image: url(media/img/passionfrukt.jpg);
-  background-size: cover;
-  height: 70vh;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: solid #fcd2d1 1px;
-}
-.erbjudande-meny-kort span {
-  display: block;
-  align-content: center;
-  font-weight: bold;
-  text-align: center;
-}
-
-.oppettider-kort {
-  width: 25%;
-  transition: 450ms;
-  background-image: url(media/img/vattenmelon.jpg);
-  background-size: cover;
-  height: 70vh;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: solid #fcd2d1 1px;
-}
-.oppettider-kort span {
-  display: block;
-  align-content: center;
-  font-weight: bold;
-  text-align: center;
-}
-
-.kort-content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  color: #e7e6e1;
-  font-size: large;
-  flex-wrap: wrap;
-  padding: 2em;
-}
-
-/* Another container with 3 cards  */
+/* A container with 3 cards, some content and a button on each card */
 
 .enkla-kort-container {
   width: 100%;
@@ -269,13 +273,14 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url(media/img/fräscht.jpg);
+  background-image: url(media/img/slush.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2em;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   position: relative;
   transition: 1s;
+  
 }
 .enkel-kort::after{
   content: "";
@@ -287,10 +292,6 @@ nav ul li a {
   background-color: rgba(152, 150, 150, 0.5);
   z-index: 0;
 }
-
-.enkel-kort li {
-  list-style-type: none;
-}
 .enkel-kort-1 {
   width: 25%;
   height: 70vh;
@@ -300,8 +301,7 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  text-align: center;
-  background-image: url(media/img/roosaaa.jpg);
+  background-image: url(media/img/lemonjuicee.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2em;
@@ -328,8 +328,7 @@ nav ul li a {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  text-align: center;
-  background-image: url(media/img/blodig.jpg);
+  background-image: url(media/img/fräscht.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -353,6 +352,7 @@ nav ul li a {
   text-align: center;
   line-height: 1.5em;
   font-size: 20px;
+  font-weight: 600;
   display: flex;
   flex-wrap: wrap;
 }
@@ -364,8 +364,9 @@ nav ul li a {
 .enkla-kort-container button {
   width: 80px;
   height: 30px;
-  background-color: rgb(114, 31, 0);
+  background-color: rgb(196, 37, 98);
   color: #e7e6e1;
+  cursor: pointer;
 }
 .enkla-kort-container a {
   text-decoration: none;
@@ -380,6 +381,80 @@ nav ul li a {
   50%{transform: rotate(-10deg);}
   100%{transform: rotate(10deg);}
   
+}
+/* A container with info on where to find us and opening hours */
+
+.stora-kort-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(240, 237, 237);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 90vh;
+  background: linear-gradient(rgb(240, 237, 237), #9b1715, rgb(240, 237, 237));
+}
+.text-ruta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: #FC0 1px 0 10px;
+  color: #e7e6e1;
+}
+
+.red-card {
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  transition: 450ms;
+  background-image: url(media/img/melon.jpg);
+  background-size: cover;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: solid #fcd2d1 1px;
+}
+.red-card span {
+  display: block;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+.red-card p{
+  display: none;
+  color: #e7e6e1;
+  font-size: 2em;
+  text-shadow: #FC0 1px 0 10px;
+}
+.red-card h3{
+  color: #e7e6e1;
+  font-size: 3em;
+  text-shadow: #FC0 1px 0 10px;
+}
+.red-card:hover{
+  background-image: url(media/img/reed.png);
+}
+.red-card:hover p{
+  display: block;
+}
+.red-card:hover h3{
+  display: none;
+}
+
+.kort-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+  font-size: large;
+  flex-wrap: wrap;
+  padding: 2em;
 }
 
 
@@ -401,20 +476,6 @@ nav ul li a {
   color: rgb(231, 230, 225);
   font-size: large;
   padding: 10em;
-  background-image: url(media/img/pexels-karolina-grabowska-4230621.jpg);
-  min-height: 400px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.tredje-parallax-bakgrunden {
-  display: flex;
-  justify-content: center;
-  font-family: "Cinzel", serif;
-  color: rgb(231, 230, 225);
-  font-size: large;
-  padding: 10em;
   background-image: url(media/img/jordgubbimjölk.jpg);
   min-height: 400px;
   background-attachment: fixed;
@@ -422,6 +483,9 @@ nav ul li a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* CSS STYLE FOR CONTACT US PAGE */
+
 /* Contact us container */
 
 .contact-us-container {
@@ -431,8 +495,13 @@ nav ul li a {
   flex-direction: column;
   background-color: rgb(240, 237, 237);
   padding-bottom: 2em;
-  height: 90vh;
+  height: auto;
+  padding-top: 4em;
 
+}
+
+.hamburger{
+  display:none;
 }
 
 input[type="text"],
@@ -485,6 +554,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   background-color: #f97371;
+  color: white;
 }
 .adress-footer p {
   display: flex;
@@ -507,43 +577,25 @@ footer {
   line-height: 1.5em;
   text-align: center;
 }
-/* Meny-sidan */
+@keyframes hamlink {
+  0%{transform: rotate(10deg);}
+  50%{transform: rotate(0deg);}
+  100%{transform: rotate(10deg);}
+}
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+/* Responsive design for smallter screens */
 
-.meny-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3em;
-}
-.left-container {
-  width: 40%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgb(245, 245, 245);
-
-}
-.right-container {
-  width: 40%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(245, 245, 245);
-}
-nav .icon {
-  display: none;
-  color: #ff5c58;
-}
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
+  /* header % nav for mobile */
 header{
     width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
   nav li:not(:first-child){
     width: 100%;
@@ -552,10 +604,27 @@ header{
   nav .icon {
     display: block;
   }
-  
-  .main-container{
-    background-image: url(media/img/pexels-john-finkelstein-1630588.jpg);
+  .logo{
+    background-color: transparent;
   }
+  .back-button {
+    display: block;
+    padding: 0.7em;
+    background-color: #f97371;
+    color: #fff;
+  }
+  header a {
+    text-decoration: none;
+  }
+  /* main container */
+  .main-container{
+    background-image: url(media/img/ananas.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+  /* about us container */
   .about-us-container{
     width: 100%;
     height: auto;
@@ -570,6 +639,7 @@ header{
   .about-us-text{
     width: 100%;
   }
+  /* a container with 3 cards for mobile */
   .enkla-kort-container{
     width: 100%;
     height: auto;
@@ -577,29 +647,135 @@ header{
     flex-direction: column;
   }
   .enkel-kort, .enkel-kort-1, .enkel-kort-2{
-    width: 100%;
-    height: 90vh;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
   }
-  .stora-kort-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+
+/* a section with some info about where to find us*/
+  .red-card{
+    display: none;
   }
-  .boka-bord-kort, .erbjudande-meny-kort, .oppettider-kort{
-    width: 100%;
-    height: 90vh;
+  .text-ruta {
+    color: white;
+    text-shadow: none;
   }
   .contact-us-container, .container{
     width: 100%;
   }
+  /* footer for mobile */
   footer {
     width: 100%;
     height: auto;
     padding: 1em;
   }
+  /* the hamburger for responsive menu */
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    left: 10px;
+    position: absolute;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
 
-
+.header{
+  display:flex;
+  background-color: transparent;
+  border-bottom: none;
+  position: sticky;
   
 }
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+#logo{
+  background-color: transparent;
+} 
+
+.nav-menu.active {
+left: 0;
+top:0;  
+opacity:0.9;
+}
+
+li{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation-name: hamburger;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hamburger {
+  0% {transform: scale(1.01);}
+  50% {transform: scale(1.0);}
+  100% {transform: scale(1.01);}
+  
+}
+
+.body-blur{
+  filter: blur(2px);
+  background-color: transparent;
+
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+
+.nav_link{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+nav{
+  display: none;
+}
+
+.h1text{
+  display: none;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.enkel-kort, .enkel-kort-1, .enkel-kort-2{
+  font-size: 5px;
+}
+}
+
+
+
+
+
 

@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meny</title>
     <link rel="stylesheet" href="meny.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
-    <header>
-        <div class="logo"><h1>Freshies</h1></div>
-        <nav>
-          <ul>
-            <li><a href="">Hem</a></li>
-            <li><a href="#about-us">Om oss</a></li>
-            <li><a href="#flavours">Smaker</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
-        </nav>
-      </header> 
+  <!-- a wrapper to style for bigger screens -->
+  <div class="wrapper">
+  <!-- header and navigationsmenu -->  
+  <header id="logo">
+    <div class="logo"><h1>Freshies</h1></div>
+    <a href="index.html"><button class="back-button">Gå tillbaka</button></a>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Hem</a></li>
+        <li><a href="/meny.html">Meny</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- A menu containing left and right section -->
       <div class="meny-container">
+  <!-- the left container with a pic and a h1 -->      
         <div class="left-container">
             <div class="menu-name"><h1>Freshies meny</h1></div>
-            <div class="menu-pic"><img src="media/img/frukt_different-types-of-fruits-png-transparent-png.png" alt="fruits" width="100%"></div>
         </div>
+  <!-- the right container with products and prices -->      
         <div class="right-container">
           <div class="flavours">
             <ul>
@@ -85,10 +93,13 @@
 
         </div>
       </div>
+<!-- footer -->      
       <footer>
         <div class="adress-footer"><p><span>Blablagatan 45</span><span>41530 Göteborg</span><span>Sverige</span></p></div>
         <div class="tel-footer"><p><span>Telefonnummer</span><span>947693470</span><span>Email</span><span>Blablabla@gmail.com</span></p></div>
-        <div class="open-footer"><p><span>Öppettider</span><span>Måndag-Fredag</span><span>11:00 - 18:00</span><span>Lördag-söndag</span><span>12:00-16:00</span></p></div>
+        <div class="open-footer"><p>Öppettider Måndag-Fre 11:00 - 18:00</br>Lör-Sön </br>12:00-16:00</p></div>
         </footer> 
+      </div>
+      <script src="index.js"></script>
 </body>
 </html>
