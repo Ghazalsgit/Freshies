@@ -361,9 +361,13 @@ nav ul li a {
 .enkla-kort-container button {
   width: 80px;
   height: 30px;
-  background-color: rgb(196, 37, 98);
-  color: #e7e6e1;
-  cursor: pointer;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  border:#e7e6e1 solid 1px;
+  border-radius: 20px;
+  color: #23036d;
+}
+.enkla-kort-container h3{
+  font-size: xx-large;
 }
 .enkla-kort-container a {
   text-decoration: none;
