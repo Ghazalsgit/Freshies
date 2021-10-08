@@ -393,7 +393,7 @@ nav ul li a {
   padding-top: 1em;
   padding-bottom: 1em;
   height: 90vh;
-  background: linear-gradient(rgb(240, 237, 237), #9b1715, rgb(240, 237, 237));
+  background: linear-gradient(rgb(240, 237, 237), #c77573, rgb(240, 237, 237));
 }
 .text-ruta{
   display: flex;
@@ -402,7 +402,7 @@ nav ul li a {
   width: 50%;
   text-align: center;
   font-size: 1.5em;
-  text-shadow: #FC0 1px 0 10px;
+  
   color: #e7e6e1;
 }
 
@@ -427,12 +427,11 @@ nav ul li a {
   display: none;
   color: #e7e6e1;
   font-size: 2em;
-  text-shadow: #FC0 1px 0 10px;
+
 }
 .red-card h3{
   color: #e7e6e1;
   font-size: 3em;
-  text-shadow: #FC0 1px 0 10px;
 }
 .red-card:hover{
   background-image: url(media/img/reed.png);
